@@ -26,6 +26,8 @@ jobs:
     - name: Build app
       run: npm run build
       working-directory: ./CitizenOfTheUniverse
+    - name: List build output for debugging
+      run: ls -l CitizenOfTheUniverse/dist/CitizenOfTheUniverse
     - name: Deploy to Azure Static Web Apps
       uses: Azure/static-web-apps-deploy@v1
       with:
