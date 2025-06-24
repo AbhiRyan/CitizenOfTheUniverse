@@ -1,0 +1,220 @@
+:host {
+  --bright-blue: rgba(61, 80, 222, 1);
+  --french-violet: rgba(143, 63, 191, 1);
+  --hot-red: rgba(255, 71, 71, 1);
+
+  --gray-900: rgba(32, 32, 46, 1);
+  --gray-700: rgba(70, 70, 90, 1);
+  --gray-400: rgba(180, 180, 200, 1);
+
+  --bg-color: rgb(214, 212, 204);
+  --font-color: #daccba;
+
+  --orange-red: rgb(255, 181, 160);
+  --vivid-pink: rgb(255, 191, 228);
+  --electric-violet: rgb(178, 143, 255);
+  --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+    180deg,
+    var(--orange-red) 0%,
+    var(--vivid-pink) 50%,
+    var(--electric-violet) 100%
+  );
+
+  --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+    90deg,
+    var(--orange-red) 0%,
+    var(--vivid-pink) 50%,
+    var(--electric-violet) 100%
+  );
+
+  --pill-accent: var(--bright-blue);
+
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin-top: 1.5rem;
+}
+
+main {
+  color: var(--font-color);
+  width: 100%;
+  min-height: 100%;
+  padding: 1rem;
+  box-sizing: inherit;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0rem;
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px);
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.31rem;
+  font-weight: 500;
+  margin-top: 0rem;
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 2px);
+}
+
+.divider {
+  width: 1px;
+  height: 10rem;
+  background: var(--red-to-pink-to-purple-vertical-gradient);
+  border: none;
+  margin-inline: 0.5rem;
+}
+
+.certificate {
+  aspect-ratio: 297 / 210;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../public/certBG.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.certificate-text {
+  color: black;
+  font-size: 5vw;
+  margin-bottom: 10vw;
+}
+
+.planet-tag {
+  height: 30rem;
+  opacity: 0.5;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.fieldset {
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: rgb(99, 99, 99);
+  border-radius: 5px;
+}
+
+.label-details {
+  padding-bottom: 0.1rem;
+}
+
+.input-checkbox {
+  width: 1rem;
+  height: 1rem;
+  top: 0.4rem;
+  margin-right: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.185);
+  background: rgba(255, 255, 255, 0.185);
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+
+  &:checked::after {
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0.25rem;
+    top: -0.15rem;
+    width: 0.35rem;
+    height: 0.7rem;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.input-citizenName {
+  margin-left: 0.2rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.185);
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pill-button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75em 2em;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: rgba(88, 167, 219, 0.8);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  &:hover {
+    background: rgb(209, 173, 119);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    outline: none;
+  }
+  &:active {
+    color: black;
+    background: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+    /* add any other styles for the pressed state */
+  }
+  &:disabled {
+    color: #646464;
+    background: rgba(108, 119, 126, 0.253);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .content {
+    flex-direction: column;
+    width: max-content;
+  }
+  .divider {
+    height: 1px;
+    width: 100%;
+    background: var(--red-to-pink-to-purple-horizontal-gradient);
+    margin-block: 1.5rem;
+  }
+}
