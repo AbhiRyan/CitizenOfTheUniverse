@@ -28,8 +28,11 @@ jobs:
         working-directory: ./CitizenOfTheUniverse
 
       - name: Build app
-        run: npm run build
+        run: npm run build -- --base-href=/
         working-directory: ./CitizenOfTheUniverse
+
+      - name: Add CNAME file for custom domain
+        run: echo 'www.citizenoftheuniverse.xyz' > CitizenOfTheUniverse/dist/CitizenOfTheUniverse/browser/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
